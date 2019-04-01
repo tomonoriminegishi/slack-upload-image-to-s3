@@ -18,9 +18,9 @@ Therefore, I thought that the problem would be solved if I could upload it to S3
 
 ## Getting Started / スタートガイド
 
-1. AWSへ環境を構築する
+### 1. AWSへ環境を構築する
 
-2. Create an app with Slack / Slackでappを作成する 
+### 2. Create an app with Slack / Slackでappを作成する 
 
 ![FireShot Capture 235 - Slack API - Slack - https___api slack com_](https://user-images.githubusercontent.com/11880332/55311853-fd22e800-549e-11e9-9e6f-0e761dda23e4.png)
 
@@ -35,9 +35,9 @@ Set 「App Name」and 「Development Slack Workspace」and press "Create App" bu
 
 「App Name」と「Development Slack Workspace」を設定し「Create App」ボタンを押す
 
-3. Create an app with Slack / OAuth & Permissionsを確認 & スコープを設定する
+### 3. Create an app with Slack / OAuth & Permissionsを確認 & スコープを設定する
 
-4. Event Subscriptionsより、Enable Evendsを設定する
+### 4. Event Subscriptionsより、Enable Evendsを設定する
 
 ## Built With / 利用するシステムのリスト
 
