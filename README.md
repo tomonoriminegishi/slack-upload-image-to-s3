@@ -19,11 +19,11 @@ Therefore, I thought that the problem would be solved if I could upload it to S3
 ## Built With / 利用するシステムのリスト
 
  * Slack
- * AWS CloudFormation
  * Amazon API Gateway
  * AWS Lambda（Python 3.7）
  * Amazon S3
-
+ * AWS CloudFormation
+ 
 ## System configuration / システム構成
 
 ![名称未設定ファイル (3)](https://user-images.githubusercontent.com/11880332/55383835-1e014100-5564-11e9-9cb5-a01e71893901.png)
@@ -107,9 +107,11 @@ Add "file_shared" in Add Workspace Event
 
 Add Workspace Eventで、"file_shared"を追加する
 
-Its done!!
+### 4. Confirm operation / 動作確認する
 
-設定完了!!
+Post the image to the Slack channel and make sure that the image is uploaded to S3
+
+Slackのチャンネルに画像を投稿し、S3に画像がアップロードされていることを確認する
 
 ## Point / ポイント
 
