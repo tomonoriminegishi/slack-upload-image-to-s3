@@ -2,6 +2,8 @@
 
 It is an App that automatically saves the image uploaded to Slack channel to S3.
 
+[日本語]
+
 Slackのチャンネルにアップロードされた画像をS3に自動で保存するAppです。
 
 ## Why？ / なぜ作成したか？
@@ -10,6 +12,8 @@ Images will be collected as learning data used in machine learning, and image da
 At that time, I started collecting it using Slack, which is adopted in-house, but there was a problem.
 It took a lot of time to transfer uploaded images to AWS, which has a machine learning basis.
 Therefore, I thought that the problem would be solved if I could upload it to S3 automatically from Slack.
+
+[日本語]
 
 機械学習で利用する学習データとして画像を集めることになり社内で画像データを募集しました。
 その際に社内で採用されているSlackを利用して集め始めたのですが問題がありました。
@@ -38,11 +42,15 @@ Therefore, I thought that the problem would be solved if I could upload it to S3
 
 Go to [https://api.slack.com/](https://api.slack.com/) and press the "Start Building" button.
 
+[日本語]
+
 [https://api.slack.com/](https://api.slack.com/)へアクセスし「Start Building」ボタンを押す。
 
 ![FireShot Capture 234 - Slack API_ Applications - Slack - https___api slack com_apps_new_app=1](https://user-images.githubusercontent.com/11880332/55311888-22175b00-549f-11e9-916d-26aaf54da013.png)
 
 Set 「App Name」and 「Development Slack Workspace」and press "Create App" button
+
+[日本語]
 
 「App Name」と「Development Slack Workspace」を設定し「Create App」ボタンを押す
 
@@ -51,6 +59,8 @@ Set 「App Name」and 「Development Slack Workspace」and press "Create App" bu
 ![FireShot Capture 236 - Slack API_ Applications - Showc_ - https___api slack com_apps_AHAFTD6BA_oauth_censored](https://user-images.githubusercontent.com/11880332/55373833-63604700-5541-11e9-9171-2ce16a834e8f.jpg)
 
 Remember "OAuth Access Token" and "Bot User OAuth Access Token"
+
+[日本語]
 
 "OAuth Access Token"と"Bot User OAuth Access Token"を記憶しておく
 
@@ -61,13 +71,13 @@ OAuth Access Token
 
 Set files:read
 
+[日本語]
+
 files:readを設定する
 
 ### 2. AWSへ環境を構築する
 
 Build an AWS environment from AWS Cloudformation.
-
-AWS CloudformationからAWSの環境を構築する。
 
 Items required to build an environment with AWS Cloudformation
 
@@ -77,6 +87,11 @@ Items required to build an environment with AWS Cloudformation
 | BOT_TOKEN     | Bot User OAuth Access Token |
 | CHANNEL_NAME       | Slack channel name |
 | S3_BUCKET         | S3 bucket name |
+
+
+[日本語]
+
+AWS CloudformationからAWSの環境を構築する。
 
 AWS Cloudformationで環境構築時に必要な項目
 
@@ -93,23 +108,27 @@ AWS Cloudformationで環境構築時に必要な項目
 
 Turn on Enable Events
 
-Enable EventsをOnにする
-
 Set API URL in AWS API Gateway to Request URL
-
-Amazon APIGatewayに作成されているAPIのURLをRequest URLに設定する
 
 Verified is OK
 
-VerifiedならOKです。
-
 Add "file_shared" in Add Workspace Event
+
+[日本語]
+
+Enable EventsをOnにする
+
+Amazon APIGatewayに作成されているAPIのURLをRequest URLに設定する
+
+VerifiedならOKです。
 
 Add Workspace Eventで、"file_shared"を追加する
 
 ### 4. Confirm operation / 動作確認する
 
 Post the image to the Slack channel and make sure that the image is uploaded to S3
+
+[日本語]
 
 Slackのチャンネルに画像を投稿し、S3に画像がアップロードされていることを確認する
 
@@ -127,6 +146,8 @@ It is inevitable that the serverless configuration is retried but the same proce
 > Responding to Events
 > Your app should respond to the event request with an HTTP 2xx **within three seconds.** If it does not, we'll consider the event delivery attempt failed. After a failure, we'll retry three times, backing off exponentially.
 
+[日本語]
+
  * Event SubscriptionsのRequest URLを設定するとURLの所有権の確認が行われます。
 この認証に対応している事
 
@@ -143,5 +164,7 @@ lambdaが起動するまでに時間がかかった場合にEvents APIがリト�
 ## License / ライセンス
 
 This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/tomonoriminegishi/slack-upload-image-to-s3/blob/master/LICENSE) file for details.
+
+[日本語]
 
 このプロジェクトは MIT ライセンスの元にライセンスされています。 詳細は [LICENSE.md](https://github.com/tomonoriminegishi/slack-upload-image-to-s3/blob/master/LICENSE) をご覧ください。
